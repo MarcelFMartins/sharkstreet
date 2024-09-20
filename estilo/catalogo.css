@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.resultado {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza as imagens */
+    margin: 0 -10px; /* Ajusta o espaço entre colunas */
+}
+
+.peca {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza a imagem e o texto */
+    background: #e7e7e7;
+    margin: 10px; /* Espaçamento entre as peças */
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 400px; /* Limita a largura máxima do fundo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para um efeito mais bonito */
+}
+
+.peca img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 400px; /* Limita a altura máxima da imagem */
+    object-fit: cover; /* Corta a imagem se necessário, preservando a proporção */
+    margin-bottom: 5px; /* Espaço entre a imagem e o texto */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    border-bottom: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 10px 0;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    transition: background-color 0.3s ease; 
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+.menu {
+    margin-top: 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px 15px; 
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+.menu:hover {
+    text-decoration: underline rgba(28, 100, 255, 0.767) 2px;
+}
+
+.imgnav {
+    width: 200px; 
+}
+
+.hamburger {
+    display: none; 
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 20px; 
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar.active .menu-items {
+        display: flex;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s ease-in-out; /* Ajuste a duração e o tipo de easing conforme necessário */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduz o padding em telas menores */
+    }
+
+    .peca {
+        max-width: 90%; /* Faz as peças ocuparem mais espaço em telas pequenas */
+    }
+
+    select {
+        font-size: 16px; /* Aumenta a legibilidade do seletor */
+    }
+
+    .navbar {
+        flex-direction: column; /* Altera a direção da navbar para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .menu {
+        padding: 5px; /* Reduz o padding dos itens do menu */
+    }
+}
+
+.site-footer {
+    background-color: black; 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    position: relative; 
+}
+
+.footer-content {
+    margin-bottom: 10px; 
+}
+
+.social-media {
+    margin: 10px 0; 
+}
+
+.social-link {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px;
+}
+
+.social-link:hover {
+    text-decoration: underline; 
+}
+
+.footer-image {
+    width: 100%; 
+    max-width: 50px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}

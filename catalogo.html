@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo/catalogo.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <title>Catálogo de Camisetas</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="navbar">
+                <a href="index.html"><img class="imgnav" src="img/IMG1.png"></a>
+                <a href="index.html" class="menu">INICIO</a>
+                <a href="catalogo.html" class="menu">CATÁLOGO</a>
+                <a href="#sobre" class="menu">SOBRE</a>
+                <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <div>
+        </nav>
+    </header>
+
+    <div class="fade-in">
+
+        <div class="container">
+            <h1>Catálogo de Camisetas</h1>
+            <p>Saiba mais em: <a target="_blank" style="color: orangered; text-decoration: underline orangered;" href="https://drive.google.com/drive/folders/12M_g5QqwzLFh2LgAb2LvwfTpfOD06p3F">Drive Google/Catalogo Completo</p></a>
+            <p>Ficou Interessado? Nos Chame: <a target="_blank" style="color: orangered; text-decoration: underline orangered;" href="https://wa.me/+554792589787">WhatsApp</a> <a target="_blank" style="color: orangered; text-decoration: underline orangered;" href="https://www.instagram.com/sstreet_shark/">Instagram</a></p>
+            <label for="tamanho">Escolha o tamanho:</label>
+            <select id="tamanho">
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select>
+            
+            <div id="resultado" class="resultado"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer" style="padding: 40px;">
+        <div class="footer-content">
+            <p>© 2024 Shark Street. Todos os direitos reservados.</p>
+            <div class="social-media">
+                <a href="https://wa.me/+554792589787" target="_blank" class="social-link">WhatsApp</a>
+                <a href="https://www.instagram.com/sstreet_shark/" target="_blank" class="social-link">Instagram</a>
+                <a href="https://linktr.ee/street_shark" target="_blank" class="social-link">LinkTree</a>
+            </div>
+        </div>
+        <img class="footer-image" src="img/icon-removebg-preview.png" alt="Imagem do Footer">
+    </footer>
+
+    <script src="js/catalogo.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

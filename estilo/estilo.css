@@ -302,6 +302,12 @@ button:hover {
     width: 200px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding-bottom: 40px;
+    transition: 0.5s;
+}
+
+.produto-box:hover {
+    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.637);
 }
 
 .produto-img {
@@ -335,4 +341,39 @@ button:hover {
     .produto-box {
         width: 90%;
     }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s ease-in-out; /* Ajuste a duração e o tipo de easing conforme necessário */
+}
+
+.catalogo-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.catalogo-botao {
+    background-color: #000000; /* cor de fundo do botão */
+    color: white; /* cor do texto */
+    padding: 10px 20px; /* espaçamento interno */
+    text-decoration: none; /* sem sublinhado */
+    border-radius: 5px; /* bordas arredondadas */
+    transition: 1s;
+    letter-spacing: 2.5px;
+}
+
+.catalogo-botao:hover {
+    background-color: white; /* cor ao passar o mouse */
+    color: black;
+    border: solid 1px rgba(128, 128, 128, 0.363);
+    letter-spacing: 5px;
 }
