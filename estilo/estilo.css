@@ -183,29 +183,43 @@ button:hover {
 }
 
 .about-store {
-    text-align: justify; 
-    padding: 50px; 
+    text-align: center; 
+    padding: 20px; 
     background-color: rgba(255, 255, 255, 0.9); 
-    border: 2px solid #ccc; 
+    border: 1px solid #ccc; 
     border-radius: 8px; 
-    margin: 0 350px; 
-    margin-top: 50px;
-    margin-bottom: 50px;
-    transition: 0.6s;
+    margin: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
+/* Estilo do título */
 .about-store h2 {
-    font-family: Copperplate; 
-    color: #000000; 
-    margin-bottom: 50px;
-    font-size: 28px; 
+    font-family: 'Franklin Gothic Medium', sans-serif; 
+    color: #1c64ff; 
+    margin-bottom: 10px; 
 }
 
 .about-store p {
-    font-family: Copperplate; 
-    color: #000000; 
+    font-family: 'Arial', sans-serif; 
+    color: #333; 
     line-height: 1.6; 
-    font-size: 24px;
+    margin: 0 10px; 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-store {
+        margin: 10px; 
+        padding: 15px; 
+    }
+
+    .about-store h2 {
+        font-size: 24px; 
+    }
+
+    .about-store p {
+        font-size: 16px; 
+    }
 }
 
 .about-store:hover {
