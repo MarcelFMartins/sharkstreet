@@ -36,3 +36,32 @@ function moveCarousel(direction) {
         isTransitioning = false;
     });
 }
+
+function initCustomCarousel() {
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.custom-carousel-images img');
+    const totalImages = images.length;
+    
+    // Move o carrossel
+    function moveCarousel(direction) {
+        currentIndex += direction;
+
+        // Reseta o índice se ultrapassar os limites
+        if (currentIndex < 0) {
+            currentIndex = totalImages - 1;
+        } else if (currentIndex >= totalImages) {
+            currentIndex = 0;
+        }
+
+        // Calcula o deslocamento
+        const offset = -currentIndex * (images[0].clientWidth + 10); // +10 é o espaço entre as imagens
+        document.querySelector('.custom-carousel-images').style.transform = `translateX(${offset}px)`;
+    }
+
+    // Adiciona eventos de clique
+    document.querySelector('.custom-carousel .prev').addEventListener('click', () => moveCarousel(-1));
+    document.querySelector('.custom-carousel .next').addEventListener('click', () => moveCarousel(1));
+}
+
+// Inicializa o carrossel personalizado
+initCustomCarousel();
