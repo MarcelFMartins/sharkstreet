@@ -71,7 +71,7 @@
 }
 
 body {
-    padding-top: 80px; 
+    padding-top: 100px; 
 }
 
 .carousel-container {
@@ -150,8 +150,8 @@ button:hover {
     width: 100px;
     height: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando transição suave */
-    cursor: pointer; /* Mudança de cursor ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
 }
 
 .brand-box img {
@@ -160,10 +160,9 @@ button:hover {
     object-fit: contain;
 }
 
-/* Efeito de hover: expande o box e aumenta a sombra */
 .brand-box:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do box em 10% */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar destaque */
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 @media (max-width: 768px) {
@@ -184,14 +183,15 @@ button:hover {
 }
 
 .about-store {
-    text-align: justify; /* Centraliza o texto */
-    padding: 50px; /* Espaçamento interno */
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente transparente */
-    border: 2px solid #ccc; /* Borda para destaque */
-    border-radius: 8px; /* Bordas arredondadas */
-    margin: 0 350px; /* Margem lateral */
+    text-align: justify; 
+    padding: 50px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    margin: 0 350px; 
     margin-top: 50px;
     margin-bottom: 50px;
+    transition: 0.6s;
 }
 
 .about-store h2 {
@@ -206,4 +206,67 @@ button:hover {
     color: #000000; 
     line-height: 1.6; 
     font-size: 24px;
+}
+
+.about-store:hover {
+    box-shadow: rgba(0, 0, 0, 0.418) 2px 2px 5px 5px;
+}
+
+.h1chronic {
+    background-color: black;
+    color: white;
+    font-family: Monoespaço;
+    font-size: 32px;
+    padding: 50px;
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+.site-footer {
+    background-color: black; 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    position: relative; 
+}
+
+.footer-content {
+    margin-bottom: 10px; 
+}
+
+.social-media {
+    margin: 10px 0; 
+}
+
+.social-link {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px;
+}
+
+.social-link:hover {
+    text-decoration: underline; 
+}
+
+.footer-image {
+    width: 100%; 
+    max-width: 50px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.voltar {
+    text-align: center; 
+    color: rgba(0, 0, 0, 0.384); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    text-decoration: none;
+    font-size: 22px;
+    transition: 1s;
+    letter-spacing: 5px;
+}
+
+.voltar:hover {
+    color: black;
+    letter-spacing: 10px;
 }
