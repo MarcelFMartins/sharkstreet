@@ -1,0 +1,209 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    border-bottom: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 10px 0;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    transition: background-color 0.3s ease; 
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+.menu {
+    margin-top: 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px 15px; 
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+.menu:hover {
+    text-decoration: underline rgba(28, 100, 255, 0.767) 2px;
+}
+
+.imgnav {
+    width: 200px; 
+}
+
+.hamburger {
+    display: none; 
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 20px; 
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar.active .menu-items {
+        display: flex;
+    }
+}
+
+body {
+    padding-top: 80px; 
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 30%;
+    margin: 0 10px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.253);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-images img {
+        width: 90%;
+        margin: 0 5px;
+    }
+}
+
+.brands-section {
+    background-color: #000000; 
+    padding: 20px 0;
+}
+
+.brands-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.brand-box {
+    background-color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando transição suave */
+    cursor: pointer; /* Mudança de cursor ao passar o mouse */
+}
+
+.brand-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Efeito de hover: expande o box e aumenta a sombra */
+.brand-box:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do box em 10% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar destaque */
+}
+
+@media (max-width: 768px) {
+    .carousel-images img {
+        width: 90%;
+        margin: 0 5px;
+    }
+    
+    .brands-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .brand-box {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.about-store {
+    text-align: justify; /* Centraliza o texto */
+    padding: 50px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente transparente */
+    border: 2px solid #ccc; /* Borda para destaque */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin: 0 350px; /* Margem lateral */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-store h2 {
+    font-family: Copperplate; 
+    color: #000000; 
+    margin-bottom: 50px;
+    font-size: 28px; 
+}
+
+.about-store p {
+    font-family: Copperplate; 
+    color: #000000; 
+    line-height: 1.6; 
+    font-size: 24px;
+}
