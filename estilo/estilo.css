@@ -61,12 +61,16 @@
         text-align: center;
     }
 
-    .hamburger {
-        display: block;
+    .navbar {
+        flex-direction: column; /* Altera a direção da navbar para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
     }
 
-    .navbar.active .menu-items {
-        display: flex;
+    .menu {
+        padding: 5px; /* Reduz o padding dos itens do menu */
+    }
+    nav {
+        margin-bottom: 110px;
     }
 }
 

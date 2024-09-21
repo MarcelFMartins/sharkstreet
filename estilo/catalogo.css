@@ -47,7 +47,7 @@ select {
     padding: 10px;
     border-radius: 5px;
     max-width: 400px; /* Limita a largura máxima do fundo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para um efeito mais bonito */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.863); /* Adiciona sombra para um efeito mais bonito */
 }
 
 .peca img {
@@ -120,14 +120,6 @@ select {
         background-color: rgba(255, 255, 255, 0.9);
         text-align: center;
     }
-
-    .hamburger {
-        display: block;
-    }
-
-    .navbar.active .menu-items {
-        display: flex;
-    }
 }
 
 @keyframes fade-in {
@@ -146,6 +138,7 @@ select {
 @media (max-width: 768px) {
     .container {
         padding: 15px; /* Reduz o padding em telas menores */
+        margin-top: 160px;
     }
 
     .peca {
