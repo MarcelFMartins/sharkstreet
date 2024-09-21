@@ -6,7 +6,7 @@ tamanhos.forEach(tamanho => {
     camisetas[tamanho] = [];
     for (let i = 1; i <= 20; i++) { // Supondo que você tenha até 82 imagens por tamanho
         camisetas[tamanho].push({
-            imagem: `../img/CATALOGO/${tamanho}/1 (${i}).jpg` // Caminho da imagem com o formato correto
+            imagem: `../img/catalogo/${tamanho}/1 (${i}).jpg` // Caminho da imagem com o formato correto
         });
     }
 });
