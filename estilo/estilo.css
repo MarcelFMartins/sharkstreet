@@ -381,3 +381,28 @@ button:hover {
     border: solid 1px rgba(128, 128, 128, 0.363);
     letter-spacing: 5px;
 }
+
+li {
+    text-decoration: none;
+    display: flex;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+li:hover {
+    text-decoration: underline #0069cc;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #000000;
+    padding: 15px;
+    border-radius: 8px;
+}

@@ -1,0 +1,230 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    border-bottom: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 10px 0;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    transition: background-color 0.3s ease; 
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+.menu {
+    margin-top: 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px 15px; 
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+.menu:hover {
+    text-decoration: underline rgba(28, 100, 255, 0.767) 2px;
+}
+
+.imgnav {
+    width: 200px; 
+}
+
+.hamburger {
+    display: none; 
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 20px; 
+}
+
+nav {
+    margin-bottom: 130px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column; /* Altera a direção da navbar para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .menu {
+        padding: 5px; /* Reduz o padding dos itens do menu */
+    }
+    nav {
+        margin-bottom: 150px;
+    }
+}
+
+li {
+    text-decoration: none;
+    display: flex;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+li:hover {
+    text-decoration: underline #0069cc;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #000000;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.menu-container {
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-list {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 180px;
+    }
+
+    li {
+        margin: 10px 0;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-list {
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 180px;
+    }
+
+    li {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s ease-in-out; /* Ajuste a duração e o tipo de easing conforme necessário */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.carrossel-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carrossel {
+    position: relative;
+    width: 30%; /* Ajuste a largura dos carrosséis */
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carrossel h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.imagens {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagens img {
+    width: 60%; /* Reduz o tamanho das imagens */
+    height: auto;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    padding: 8px; /* Ajusta o tamanho do botão */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carrossel {
+        width: 90%; /* Ajusta a largura em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 6px; /* Reduz o tamanho do botão em telas menores */
+    }
+}
