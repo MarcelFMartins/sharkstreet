@@ -396,7 +396,7 @@ li:hover {
     text-decoration: underline #0069cc;
 }
 
-ul {
+.menu-list {
     display: flex;
     justify-content: space-around;
     align-items: center; 
@@ -405,4 +405,38 @@ ul {
     background-color: #000000;
     padding: 15px;
     border-radius: 8px;
+}
+
+.menu-container {
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-list {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 180px;
+    }
+
+    li {
+        margin: 10px 0;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-list {
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 180px;
+    }
+
+    li {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
 }
